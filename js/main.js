@@ -1,5 +1,3 @@
-// JavaScript Document
-
 $(document).ready(function(){
     
     var myTodo = [{'name':'Laundry','complete':true}, 
