@@ -2,22 +2,10 @@
 
 $(document).ready(function(){
     
-    var myTodo = [{
-    'name':'Laundry',
-    'complete':true
-    }, {
-        
-    'name': 'Clean the Fridge',
-	'complete': false	
-    }, {
-        
-	'name': 'Grocery Shopping',
-	'complete': true	
-    },{
-        
-	'name': 'Workout',
-	'complete': true	
-    }];
+    var myTodo = [{'name':'Laundry','complete':true}, 
+    {'name': 'Clean the Fridge','complete': false}, 
+    {'name': 'Grocery Shopping','complete': true},
+    {'name': 'Workout',	'complete': true}];
 
     var html = '<p> To Do List</p>';
         html += '<ol>';
