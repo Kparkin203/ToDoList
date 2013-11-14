@@ -5,12 +5,13 @@ $(document).ready(function(){
     {'name': 'Grocery Shopping','complete': true},
     {'name': 'Workout',	'complete': true}];
 
-    var html = '<p> To Do List</p>';
-        html += '<ol>';
+    var html ='';// = '<p> To Do List</p>';
+        //html += '<ol>';
 
 //document.write('<p>To Do List</p>');
 //document.write('<ul>');
-
+   
+    $ ("<ul class ='list-group'>").appendTo(".panel-body");
     for(var i = 0; i < myTodo.length; i++) {
         try {
          // print(myTasks[i]);
@@ -20,10 +21,11 @@ $(document).ready(function(){
             console.log('There is a problem:' + error);
          }
     }
+    $('ul.list-group').append(html);
     
-    html+='</ol>';
+    //html+='</ol>';
     
-    $('.container').append(html);
+    //$('</ul').appendTo(".panel-body");
 });
     
 //document.write('</ul>');
@@ -36,11 +38,12 @@ $(document).ready(function(){
             throw 'The task status is missing!';
         } 
 			if(theTask.complete) {
-                return '<li class=complete>' + theTask.name + '</li>';
+                return "<li class='list-group-item complete'>" + theTask.name + '</li>';
        		// document.write('<li class="complete">' + theTask.name + '</li>');
     		} else {
         		//	document.write('<li>' + theTask.name + '</li>'); 
-                return '<li>' + theTask.name + '</li>';
+                return "<li class='list-group-item'>" + theTask.name + '</li>';
+               
          }
       }
 
